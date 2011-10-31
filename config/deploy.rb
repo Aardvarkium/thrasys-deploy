@@ -22,7 +22,7 @@ require 'capistrano/ext/multistage'
 # REPLACE this below with your git repo
 set :use_sudo, false
 set :deploy_to, "/srv/rails/#{application}"
-set :repository, "git@github.com:Aardvarkium/thrasys-rails.git"
+set :repository, "git@github.com:Aardvarkium/thrasys-deploy.git"
 set :scm, :git
 set :branch, "master"
 set :deploy_via, :remote_cache
