@@ -1,0 +1,24 @@
+<h1>Listing technologies</h1>
+
+<table>
+  <tr>
+    <th>title</th>
+    <th>Sort order</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @technologies.each do |technology| %>
+  <tr>
+    <td><%= technology.title %></td>
+    <td><%= technology.sort_order %></td>
+    <td><%= link_to 'Edit', edit_admin_technology_path(technology) %></td>
+    <td><%= link_to 'Destroy', [:admin, technology], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Technology', new_admin_technology_path %>

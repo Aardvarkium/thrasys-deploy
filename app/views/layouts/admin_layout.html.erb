@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <%= render '/layouts/head' %>
+  <body>
+    <div id="content">
+      <%= render '/layouts/header' %>
+      <%= render '/layouts/admin_header' %>
+      <%= yield %>
+      <%= render '/layouts/footer' %>
+    </div>
+  </body>
+</html>

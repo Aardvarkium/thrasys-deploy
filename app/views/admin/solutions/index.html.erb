@@ -1,0 +1,24 @@
+<h1>Listing solutions</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Sort order</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @solutions.each do |solution| %>
+  <tr>
+    <td><%= solution.title %></td>
+    <td><%= solution.sort_order %></td>
+    <td><%= link_to 'Edit', edit_admin_solution_path(solution) %></td>
+    <td><%= link_to 'Destroy', [:admin, solution], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Solution', new_admin_solution_path %>
