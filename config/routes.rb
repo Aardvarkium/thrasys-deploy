@@ -4,8 +4,8 @@ Thrasys::Application.routes.draw do
 
   #mount DucklingBlog::Engine => "/blog", :as => "blog_engine"
   root :to => 'home#index'
-  match '/technology' => 'pages#technology'
-  match '/solutions' => 'pages#solutions'
+  match '/technology' => 'static#technology'
+  match '/solutions' =>  'static#solutions'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
